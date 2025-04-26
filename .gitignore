@@ -37,3 +37,6 @@ FallacyDetectorNonVibe/Resources/APIKeys.plist
 *.lock
 .DS_Store
 .idea/
+
+# Emacs drafts
+*~
