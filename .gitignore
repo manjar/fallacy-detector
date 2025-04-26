@@ -1,0 +1,39 @@
+# Xcode
+*.xcuserdata
+*.xcuserstate
+*.xcworkspace
+DerivedData/
+build/
+*.moved-aside
+*.xcuserdatad/
+
+# SwiftPM
+/.build/
+/Packages/
+/Package.resolved
+
+# CocoaPods
+/Pods/
+
+# Carthage
+/Carthage/
+
+# Fastlane
+/fastlane/report.xml
+/fastlane/Preview.html
+/fastlane/screenshots/**/*.png
+
+# Archives
+*.xcarchive
+
+# Provisioning Profiles
+*.mobileprovision
+
+# API Keys and Secrets (your addition)
+FallacyDetectorNonVibe/Resources/APIKeys.plist 
+
+# Temporary files
+*.swp
+*.lock
+.DS_Store
+.idea/
