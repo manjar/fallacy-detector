@@ -11,27 +11,37 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var showInputSheet = false
+    @State private var showSummarySheet = false
     @Query private var items: [Item]
     @State private var selectedItem: Item? = nil
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        FallacyView(inputText: item.inputText, fallacies: item.fallacyResults)
-                    } label: {
-                        VStack {
-                            ListCell(item: item)
+                Section {
+                    ForEach(items) { item in
+                        NavigationLink {
+                            FallacyView(inputText: item.inputText, fallacies: item.fallacyResults)
+                        } label: {
+                            VStack {
+                                ListCell(item: item)
+                            }
                         }
                     }
+                    .onDelete(perform: deleteItems)
+                } header: {
+                    Text("Saved analyses")
                 }
-                .onDelete(perform: deleteItems)
             }
 #if os(macOS)
             .navigationSplitViewColumnWidth(min: 180, ideal: 200)
 #endif
             .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: { showSummarySheet = true }) {
+                        Label("View Summary", systemImage: "info.square")
+                    }
+                }
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: { showInputSheet = true }) {
                         Label("Add Item", systemImage: "plus")
@@ -60,6 +70,9 @@ struct ContentView: View {
                     }
                     showInputSheet = false
                 }
+            }
+            .sheet(isPresented: $showSummarySheet) {
+                SummaryView(summary: SummaryGenerator(items: items).summary)
             }
         } detail: {
             if let item = selectedItem {

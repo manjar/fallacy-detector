@@ -15,8 +15,18 @@ struct ListCell: View {
             Text(item.inputText)
                 .lineLimit(1)
                 .truncationMode(.tail)
-            Text(item.timestamp.formatted(date: .abbreviated, time: .standard))
-                .font(.caption)
+            HStack {
+                if item.fallacyInstances.isEmpty {
+                    ProgressView()
+                        .controlSize(.small)
+                } else {
+                    Text("\(item.fallacyInstances.count) fallacies detected.")
+                        .font(.caption)
+                }
+                Spacer()
+                Text(item.timestamp.formatted(date: .abbreviated, time: .shortened))
+                    .font(.caption)
+            }
         }
         .padding()
     }

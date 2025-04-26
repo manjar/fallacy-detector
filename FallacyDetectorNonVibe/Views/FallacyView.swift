@@ -27,10 +27,19 @@ struct FallacyView: View {
             Spacer()
             if let fallacies {
                 List {
-                    ForEach(fallacies) { fallacy in
-                        FallacyElementView(fallacy: fallacy)
+                    Section {
+                        ForEach(Array(fallacies.enumerated()), id: \.offset) { index, fallacy in
+                            Text("Fallacy \(index + 1)")
+                                .font(.largeTitle)
+                            FallacyElementView(fallacy: fallacy)
+                                .listRowSeparator(.hidden)
+                        }
+                    } header: {
+                        Text("Findings")
                     }
                 }
+                .listStyle(.inset)
+                .scrollContentBackground(.hidden)
             }
         }
         .background(Color.clear)

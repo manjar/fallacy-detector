@@ -39,6 +39,10 @@ final class Item: Identifiable {
         if let data = try? encoder.encode(results),
            let jsonString = String(data: data, encoding: .utf8) {
             self.fallacyResultsJSON = jsonString
+            let fallacyResults = ResponseParser.parseJSON(jsonString: jsonString)
+            for result in fallacyResults {
+                fallacyInstances.append(FallacyInstance(originalText: result.originalText, fallacy: result.fallacy, avoidance: result.avoidance, counter: result.counter, link: URL(string: result.reference)!))
+            }
         }
     }
 }

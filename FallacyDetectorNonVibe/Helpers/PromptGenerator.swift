@@ -24,7 +24,7 @@ struct PromptGenerator {
         Your task is to review the following text and identify any logical fallacies present.
         For each fallacy you find, return a JSON object with the following fields:
         
-        - "fallacy": The name of the logical fallacy.
+        - "fallacy": The name of the logical fallacy, followed by a very brief (one short sentence) description of the fallacy
         - "originalText": The specific sentence(s) or phrase(s) in the input text where the fallacy occurs.
         - "avoidance": Advice on how the fallacy could have been avoided in the original argument.
         - "counter": Suggestions for how someone could counter this fallacy in a debate.

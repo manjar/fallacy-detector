@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct FallacySuggestionView: View {
+struct FallacyElementSubview: View {
     let suggestionType: SuggestionType
     let suggestion: String
     
     enum SuggestionType: String {
         case recap = "Fallacious passage"
+        case fallacy = "Fallacy"
         case counter = "How to counter"
         case avoidance = "What to do instead"
         
@@ -20,8 +21,10 @@ struct FallacySuggestionView: View {
             switch self {
             case .recap:
                 return .blue
-            case .counter:
+            case .fallacy:
                 return .red
+            case .counter:
+                return .yellow
             case .avoidance:
                 return .green
             }
@@ -35,6 +38,7 @@ struct FallacySuggestionView: View {
             Text(suggestion)
                 .font(.subheadline)
         }
+        .frame(maxWidth: .infinity)
         .padding()
         .background(suggestionType.color.opacity(0.1))
         .clipShape(RoundedRectangle(cornerRadius: 8))
@@ -45,13 +49,15 @@ struct FallacyElementView: View {
     let fallacy: Fallacy
     var body: some View {
         VStack(spacing: 15) {
-            FallacySuggestionView(suggestionType: .recap, suggestion: fallacy.originalText)
-            Text(fallacy.fallacy)
-                .font(.headline)
-            FallacySuggestionView(suggestionType: .avoidance, suggestion: fallacy.avoidance)
-            FallacySuggestionView(suggestionType: .counter, suggestion: fallacy.counter)
+            FallacyElementSubview(suggestionType: .recap, suggestion: fallacy.originalText)
+            FallacyElementSubview(suggestionType: .fallacy, suggestion: fallacy.fallacy)
+            FallacyElementSubview(suggestionType: .avoidance, suggestion: fallacy.avoidance)
+            FallacyElementSubview(suggestionType: .counter, suggestion: fallacy.counter)
             Link("Learn more on Wikipedia", destination: URL(string: fallacy.reference)!)
                 .font(.caption)
+                .padding()
+                .background(Color.purple.opacity(0.1))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
         }
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }
