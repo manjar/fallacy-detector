@@ -12,15 +12,18 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var showInputSheet = false
     @Query private var items: [Item]
+    @State private var selectedItem: Item? = nil
 
     var body: some View {
         NavigationSplitView {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        FallacyView(inputText: item.inputText, fallacies: item.fallacyResults)
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        VStack {
+                            ListCell(item: item)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -42,7 +45,7 @@ struct ContentView: View {
                         modelContext.insert(newItem)
                         Task {
                             let processor = FallacyProcessor(promptSender: GeminiPromptSender())
-                            let fallacies = await processor.analyze(text: inputText)
+                            let fallacies = await processor.fetch(text: inputText)
                             await MainActor.run {
                                 if let fallacies {
                                     newItem.saveFallacyResults(fallacies)
@@ -59,7 +62,11 @@ struct ContentView: View {
                 }
             }
         } detail: {
-            Text("Select an item")
+            if let item = selectedItem {
+                FallacyView(inputText: item.inputText, fallacies: item.fallacyResults)
+            } else {
+                Text("Select an item")
+            }
         }
     }
 

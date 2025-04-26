@@ -11,12 +11,11 @@ struct FallacyProcessor {
     /// Analyzes the input text and returns the parsed logical fallacy results.
     /// - Parameter text: The input text to analyze.
     /// - Returns: An array of LogicalFallacy objects found in the text.
-    func analyze(text: String) async -> [Fallacy]? {
+    func fetch(text: String) async -> [Fallacy]? {
         let prompt = PromptGenerator.generatePrompt(for: text)
         do {
-            let responseString = try await promptSender.sendPrompt(prompt)
-            if let responseString {
-                let fallacies = ResponseParser.parse(jsonString: responseString)
+            if let responseString = try await promptSender.sendPrompt(prompt) {
+                let fallacies = ResponseParser.parseJSON(jsonString: responseString)
                 return fallacies
             }
         } catch {
