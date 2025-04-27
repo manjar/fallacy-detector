@@ -13,7 +13,7 @@ struct ListCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(item.inputText)
-                .lineLimit(1)
+                .lineLimit(2)
                 .truncationMode(.tail)
             HStack {
                 Spacer()
