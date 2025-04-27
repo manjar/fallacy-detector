@@ -30,8 +30,12 @@ struct FallacyView: View {
                 List {
                     Section {
                         ForEach(Array(fallacies.enumerated()), id: \.offset) { index, fallacy in
-                            Text("Fallacy \(index + 1)")
-                                .font(.largeTitle)
+                            HStack {
+                                Spacer()
+                                Text("Fallacy \(index + 1)")
+                                    .font(.title)
+                                Spacer()
+                            }
                             FallacyElementView(fallacy: fallacy)
                                 .listRowSeparator(.hidden)
                         }

@@ -20,7 +20,7 @@ struct FallacyProcessor {
             }
         } catch {
             // Handle the error here (e.g., show an alert, log, or store the error)
-            print("Prompt sending failed: \(error)")
+            AppLogger.fetch.error("Prompt sending failed: \(error.localizedDescription)")
         }
         return nil
     }
