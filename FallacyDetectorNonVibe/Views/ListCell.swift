@@ -16,13 +16,6 @@ struct ListCell: View {
                 .lineLimit(1)
                 .truncationMode(.tail)
             HStack {
-                if item.fallacyInstances.isEmpty {
-                    ProgressView()
-                        .controlSize(.small)
-                } else {
-                    Text("\(item.fallacyInstances.count) fallacies detected.")
-                        .font(.caption)
-                }
                 Spacer()
                 Text(item.timestamp.formatted(date: .abbreviated, time: .shortened))
                     .font(.caption)
