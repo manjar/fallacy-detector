@@ -60,7 +60,7 @@ struct ContentView: View {
                                     newItem.saveFallacyResults(fallacies)
                                     newItem.errorMessage = nil
                                 } else {
-                                    newItem.fallacyResultsJSON = nil
+                                    newItem.fallacyResponseJSON = nil
                                     newItem.errorMessage = "No fallacies found or analysis failed."
                                 }
                                 // If needed, save context here
@@ -112,7 +112,7 @@ struct ContentView: View {
                     Circle()
                         .fill(Color.blue)
                         .frame(width: 40, height: 40)
-                    if item.fallacyResultsJSON == nil {
+                    if item.fallacyResponseJSON == nil {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle(tint: .white))
                     } else {

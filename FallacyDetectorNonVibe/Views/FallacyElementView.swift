@@ -46,14 +46,14 @@ struct FallacyElementSubview: View {
 }
 
 struct FallacyElementView: View {
-    let fallacy: Fallacy
+    let fallacyInstance: FallacyInstance
     var body: some View {
         VStack(spacing: 15) {
-            FallacyElementSubview(suggestionType: .recap, suggestion: fallacy.originalText)
-            FallacyElementSubview(suggestionType: .fallacy, suggestion: fallacy.fallacy)
-            FallacyElementSubview(suggestionType: .avoidance, suggestion: fallacy.avoidance)
-            FallacyElementSubview(suggestionType: .counter, suggestion: fallacy.counter)
-            Link("Learn more on Wikipedia", destination: URL(string: fallacy.reference)!)
+            FallacyElementSubview(suggestionType: .recap, suggestion: fallacyInstance.originalText)
+            FallacyElementSubview(suggestionType: .fallacy, suggestion: fallacyInstance.fallacy)
+            FallacyElementSubview(suggestionType: .avoidance, suggestion: fallacyInstance.avoidance)
+            FallacyElementSubview(suggestionType: .counter, suggestion: fallacyInstance.counter)
+            Link("Learn more on Wikipedia", destination: fallacyInstance.link)
                 .font(.caption)
                 .padding()
                 .background(Color.purple.opacity(0.1))
@@ -64,5 +64,5 @@ struct FallacyElementView: View {
 }
 
 #Preview {
-    FallacyElementView(fallacy: Fallacy(fallacy: "Fallacy name", originalText: "Original text", avoidance: "How to avoid", counter: "How to counter", reference: "http://example.com"))
+    FallacyElementView(fallacyInstance: FallacyInstance(originalText: "Original text", fallacy: "Fallacy name", avoidance: "What to do instead", counter: "How to counter it", link: URL(string: "http://example.com")!))
 }

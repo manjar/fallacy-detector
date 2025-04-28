@@ -26,36 +26,34 @@ struct FallacyView: View {
             .border(.black)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
             Spacer()
-            if let fallacies = item.fallacyResults {
-                List {
-                    Section {
-                        ForEach(Array(fallacies.enumerated()), id: \.offset) { index, fallacy in
-                            HStack {
-                                Spacer()
-                                Text("Fallacy \(index + 1)")
-                                    .font(.title)
-                                Spacer()
-                            }
-                            FallacyElementView(fallacy: fallacy)
-                                .listRowSeparator(.hidden)
-                        }
-                    } header: {
+            List {
+                Section {
+                    ForEach(Array(item.fallacyInstances.enumerated()), id: \.offset) { index, fallacyInstance in
                         HStack {
-                            Text("Findings")
-                                .font(.headline)
                             Spacer()
-                            Button(action: {
-                               showHelpSheet = true
-                            }) {
-                                Image(systemName: "questionmark.circle")
-                            }
-                            .buttonStyle(BorderlessButtonStyle()) // important for tappability in headers
+                            Text("Fallacy \(index + 1)")
+                                .font(.title)
+                            Spacer()
                         }
+                        FallacyElementView(fallacyInstance: fallacyInstance)
+                            .listRowSeparator(.hidden)
+                    }
+                } header: {
+                    HStack {
+                        Text("Findings")
+                            .font(.headline)
+                        Spacer()
+                        Button(action: {
+                            showHelpSheet = true
+                        }) {
+                            Image(systemName: "questionmark.circle")
+                        }
+                        .buttonStyle(BorderlessButtonStyle()) // important for tappability in headers
                     }
                 }
-                .listStyle(.inset)
-                .scrollContentBackground(.hidden)
             }
+            .listStyle(.inset)
+            .scrollContentBackground(.hidden)
         }
         .background(Color.clear)
         .sheet(isPresented: $showHelpSheet) {
@@ -73,7 +71,7 @@ struct FallacyView: View {
                                 item.saveFallacyResults(fallacies)
                                 item.errorMessage = nil
                             } else {
-                                item.fallacyResultsJSON = nil
+                                item.fallacyResponseJSON = nil
                                 item.errorMessage = "No fallacies found or analysis failed."
                             }
                         }
