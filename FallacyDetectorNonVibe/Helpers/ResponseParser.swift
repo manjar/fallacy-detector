@@ -21,11 +21,7 @@ struct Fallacy: Codable, Identifiable {
     private enum CodingKeys : String, CodingKey { case fallacy, originalText, avoidance, counter, reference }
 }
 
-/// Parses the JSON response from the LLM into an array of LogicalFallacy objects.
 struct ResponseParser {
-    /// Parses a JSON string into an array of LogicalFallacy objects.
-    /// - Parameter jsonString: The JSON string returned by the LLM.
-    /// - Returns: An array of LogicalFallacy objects, or an empty array if parsing fails.
     static func parseJSON(jsonString: String) -> [Fallacy] {
         print("Attempting to parse JSON string: <<\(jsonString)>>")
         guard let data = jsonString.data(using: .utf8) else { return [] }

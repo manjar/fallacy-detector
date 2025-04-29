@@ -41,6 +41,23 @@ struct ContentView: View {
             .navigationSplitViewColumnWidth(min: 180, ideal: 200)
 #endif
             .toolbar {
+#if DEBUG
+                if !items.isEmpty {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: {
+                            do {
+                                let codableItems = items.map { $0.toCodable() }
+                                try saveCodableItemsToPlist(codableItems)
+                            } catch {
+                                print("Failed to save plist: \(error)")
+                                // Optionally: show alert to user
+                            }
+                        }) {
+                            Label("Dump to plist", systemImage: "arrow.down.circle")
+                        }
+                    }
+                }
+#endif
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: { showInputSheet = true }) {
                         Label("Add Item", systemImage: "plus")
@@ -53,15 +70,19 @@ struct ContentView: View {
                         let newItem = Item(timestamp: Date(), inputText: inputText)
                         modelContext.insert(newItem)
                         Task {
-                            let processor = FallacyProcessor(promptSender: GeminiPromptSender())
+                            let processor = FallacyProcessor(promptSender: OpenAIPromptSender())
                             let fallacies = await processor.fetch(text: inputText)
+                            newItem.analysisState = .inProgress
                             await MainActor.run {
                                 if let fallacies {
                                     newItem.saveFallacyResults(fallacies)
                                     newItem.errorMessage = nil
+                                    newItem.analysisState = .completed
                                 } else {
+                                    // TODO: distinguish between case where no fallacies were found and where some actual error occurred
                                     newItem.fallacyResponseJSON = nil
                                     newItem.errorMessage = "No fallacies found or analysis failed."
+                                    newItem.analysisState = .failed
                                 }
                                 // If needed, save context here
                             }
@@ -112,7 +133,7 @@ struct ContentView: View {
                     Circle()
                         .fill(Color.blue)
                         .frame(width: 40, height: 40)
-                    if item.fallacyResponseJSON == nil {
+                    if item.analysisState == .inProgress {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle(tint: .white))
                     } else {
@@ -160,6 +181,9 @@ struct ContentView: View {
                 .font(.body)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
+            Button("Create example") {
+                print("would be creating an example")
+            }
         }
         .padding()
     }

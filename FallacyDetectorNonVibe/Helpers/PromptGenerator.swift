@@ -9,14 +9,7 @@
 
 import Foundation
 
-/// A utility for generating prompts to detect logical fallacies in a given input string.
-/// The generated prompt instructs a language model to analyze the text, identify logical fallacies,
-/// and return a structured JSON response with details for each fallacy found.
 struct PromptGenerator {
-    
-    /// Wraps the input text in a detailed prompt for logical fallacy detection.
-    /// - Parameter input: The user-provided text to analyze.
-    /// - Returns: A complete prompt string to send to an LLM.
     static func generatePrompt(for input: String) -> String {
         """
         You are an expert in argument analysis and logical reasoning.

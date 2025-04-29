@@ -11,7 +11,6 @@ import Foundation
 import GoogleGenerativeAI
 
 protocol PromptSender {
-    /// Sends a prompt string and returns the LLM's response as a string (typically JSON).
     func sendPrompt(_ prompt: String) async throws -> String?
 }
 
@@ -25,14 +24,12 @@ class GeminiPromptSender: PromptSender {
     private let model: GenerativeModel
 
     init() {
-        // Initialize the model with your API key and preferred Gemini model.
         self.model = GenerativeModel(
             name: "gemini-1.5-pro-latest", // or "gemini-1.5-flash" for the latest model[5][6]
             apiKey: APIKey.gemini.value
         )
     }
 
-    /// Sends a prompt string to the Gemini API and prints the response.
     func sendPrompt(_ prompt: String) async throws -> String? {
         do {
             print(">>> Sending prompt: \(prompt)")

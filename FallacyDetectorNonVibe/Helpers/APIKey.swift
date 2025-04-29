@@ -11,7 +11,6 @@ enum APIKey: String {
     case gemini = "Gemini_API_KEY"
     case openAI = "OpenAI_API_KEY"
     
-    /// Retrieves the API key for the specified service from the property list.
     var value: String {
         guard let filePath = Bundle.main.path(forResource: "APIKeys", ofType: "plist") else {
             fatalError("Couldn't find file 'GenerativeAI-Info.plist'.")
