@@ -401,7 +401,66 @@ Of course, some folks claim they get better results from afternoon sessions, but
 	</dict>
 	<dict>
 		<key>fallacyInstances</key>
-		<array/>
+		<array>
+			<dict>
+				<key>avoidance</key>
+				<string>Acknowledge the time constraints people face and offer alternative solutions for healthy eating.</string>
+				<key>counter</key>
+				<string>Explain that time is a legitimate constraint and that prioritizing health can involve various strategies, not solely homemade bread.</string>
+				<key>fallacy</key>
+				<string>Appeal to Purity: Arguing that a claim is only true in its purest form, dismissing any practical considerations.</string>
+				<key>id</key>
+				<string>92DF62E1-A208-48AE-8E3F-25B09C90DC9C</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/No_true_Scotsman#Appeal_to_purity</string>
+				<key>originalText</key>
+				<string>Some people argue that homemade bread takes too much time, but that’s just an excuse to avoid learning new skills. Besides, if you really valued your health, you’d make the effort.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Address the actual reasons why people might choose store-bought bread, such as convenience or dietary restrictions.</string>
+				<key>counter</key>
+				<string>Point out that healthy eating encompasses many choices and doesn't necessitate making everything from scratch. Provide examples of other healthy eating habits that don't involve baking.</string>
+				<key>fallacy</key>
+				<string>Straw Man: Misrepresenting someone's argument to make it easier to attack.</string>
+				<key>id</key>
+				<string>94E747CC-8728-4BBC-9508-7F3FD51CCA7E</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Straw_man</string>
+				<key>originalText</key>
+				<string>If you don’t bake your own bread, you’re not really interested in healthy eating. After all, people who care about their diet always make everything from scratch. Store-bought bread is just for people who don’t care what they eat.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Acknowledge the range of choices available for bread consumption, including store-bought options that can be part of a healthy diet.</string>
+				<key>counter</key>
+				<string>Point out the existence of healthy store-bought bread options and the fact that dietary choices depend on individual circumstances.</string>
+				<key>fallacy</key>
+				<string>False Dilemma: Presenting two options as the only possibilities when in reality, more exist.</string>
+				<key>id</key>
+				<string>51A6F049-19A8-4472-B78A-10B250A5E7C9</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/False_dilemma</string>
+				<key>originalText</key>
+				<string>Clearly, homemade is the only sensible choice.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Provide evidence-based arguments for the benefits of homemade bread, rather than relying solely on the recommendations of nutritionists.</string>
+				<key>counter</key>
+				<string>Question the premise that all nutritionists recommend baking at home. Also, highlight the potential biases of those nutritionists and present counter-examples or studies supporting the healthiness of certain store-bought breads.</string>
+				<key>fallacy</key>
+				<string>Appeal to Authority: Basing an argument solely on the supposed authority of a figure without further justification.</string>
+				<key>id</key>
+				<string>9E64C17A-0B60-4BDD-A8F7-BB6FD48ACC08</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Argument_from_authority</string>
+				<key>originalText</key>
+				<string>Of course, there are people who say they’re too busy or that store-bought bread is just as good, but if store-bought bread were truly healthy, why do so many nutritionists recommend baking at home?</string>
+			</dict>
+		</array>
+		<key>fallacyResponseJSON</key>
+		<string>[{"counter":"Point out that healthy eating encompasses many choices and doesn't necessitate making everything from scratch. Provide examples of other healthy eating habits that don't involve baking.","reference":"https:\/\/en.wikipedia.org\/wiki\/Straw_man","fallacy":"Straw Man: Misrepresenting someone's argument to make it easier to attack.","avoidance":"Address the actual reasons why people might choose store-bought bread, such as convenience or dietary restrictions.","originalText":"If you don’t bake your own bread, you’re not really interested in healthy eating. After all, people who care about their diet always make everything from scratch. Store-bought bread is just for people who don’t care what they eat."},{"counter":"Explain that time is a legitimate constraint and that prioritizing health can involve various strategies, not solely homemade bread.","avoidance":"Acknowledge the time constraints people face and offer alternative solutions for healthy eating.","reference":"https:\/\/en.wikipedia.org\/wiki\/No_true_Scotsman#Appeal_to_purity","originalText":"Some people argue that homemade bread takes too much time, but that’s just an excuse to avoid learning new skills. Besides, if you really valued your health, you’d make the effort.","fallacy":"Appeal to Purity: Arguing that a claim is only true in its purest form, dismissing any practical considerations."},{"avoidance":"Provide evidence-based arguments for the benefits of homemade bread, rather than relying solely on the recommendations of nutritionists.","fallacy":"Appeal to Authority: Basing an argument solely on the supposed authority of a figure without further justification.","counter":"Question the premise that all nutritionists recommend baking at home. Also, highlight the potential biases of those nutritionists and present counter-examples or studies supporting the healthiness of certain store-bought breads.","originalText":"Of course, there are people who say they’re too busy or that store-bought bread is just as good, but if store-bought bread were truly healthy, why do so many nutritionists recommend baking at home?","reference":"https:\/\/en.wikipedia.org\/wiki\/Argument_from_authority"},{"avoidance":"Acknowledge the range of choices available for bread consumption, including store-bought options that can be part of a healthy diet.","counter":"Point out the existence of healthy store-bought bread options and the fact that dietary choices depend on individual circumstances.","reference":"https:\/\/en.wikipedia.org\/wiki\/False_dilemma","originalText":"Clearly, homemade is the only sensible choice.","fallacy":"False Dilemma: Presenting two options as the only possibilities when in reality, more exist."}]</string>
 		<key>id</key>
 		<string>08592253-2E65-4E07-A9FC-DDE002DBD332</string>
 		<key>inputText</key>

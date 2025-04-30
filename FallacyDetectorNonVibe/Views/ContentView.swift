@@ -109,16 +109,22 @@ struct ContentView: View {
                     Circle()
                         .fill(Color.blue)
                         .frame(width: 40, height: 40)
-                    if item.analysisState == .inProgress {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                    } else {
+                    switch item.analysisState {
+                    case .completed:
                         Text("\(item.fallacyInstances.count)")
                             .foregroundColor(.white)
+                    case .failed:
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.red)
+                    case .inProgress:
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    default:
+                        EmptyView()
                     }
                 }
                 VStack(alignment: .leading, spacing: 8) {
-                    ListCell(item: item) // Your custom view
+                    ListCell(item: item)
                 }
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
