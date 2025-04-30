@@ -20,6 +20,10 @@ extension PromptSender {
     }
 }
 
+func DefaultPromptSender() -> PromptSender {
+    GeminiPromptSender()
+}
+
 class GeminiPromptSender: PromptSender {
     private let model: GenerativeModel
 

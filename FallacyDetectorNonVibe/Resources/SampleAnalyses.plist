@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>fallacyInstances</key>
+		<array>
+			<dict>
+				<key>avoidance</key>
+				<string>Focus on the benefits of musical education without tying it exclusively to childhood.</string>
+				<key>counter</key>
+				<string>Challenge the premise that early exposure is essential for appreciation by providing examples of people who developed a deep appreciation for music later in life.</string>
+				<key>fallacy</key>
+				<string>Appeal to tradition (Argumentum ad antiquitatem): An argument that something is good or correct because it's old or traditional.</string>
+				<key>id</key>
+				<string>B9114845-8A72-4011-801D-8665585F83AD</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Appeal_to_tradition</string>
+				<key>originalText</key>
+				<string>Anyone who doesn’t learn to play a musical instrument as a child will never truly appreciate music. If you didn’t take lessons growing up, you missed your chance to understand what music is really about.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Define "music lover" objectively, without excluding those who develop their passion later in life.</string>
+				<key>counter</key>
+				<string>Challenge the narrow definition of "music lover."  Provide examples of people who developed a love of music later in life and demonstrate their deep appreciation.</string>
+				<key>fallacy</key>
+				<string>No true Scotsman: Defining a group in a way that excludes counterexamples.</string>
+				<key>id</key>
+				<string>89A54686-CD35-49E6-9406-C003F7F9376A</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/No_true_Scotsman</string>
+				<key>originalText</key>
+				<string>Of course, some adults do learn to play, but if you weren’t passionate about music as a child, you’re not a real music lover. After all, true music lovers start young.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Address the actual arguments of those who enjoy music without playing instruments.</string>
+				<key>counter</key>
+				<string>Point out the misrepresentation. Explain that enjoying music and playing music are different activities that can be enjoyed independently.</string>
+				<key>fallacy</key>
+				<string>Straw man: Misrepresenting someone's argument to make it easier to attack.</string>
+				<key>id</key>
+				<string>BB6F4F43-8CAD-4546-B5A3-16006A83525C</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Straw_man</string>
+				<key>originalText</key>
+				<string>Besides, those who claim to enjoy music without playing an instrument are just pretending.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Avoid using the number of adult musicians as evidence for or against the ability to appreciate music.</string>
+				<key>counter</key>
+				<string>Explain that the number of people doing something doesn't determine its value or possibility. Many factors influence adult learning, and lack of widespread mastery doesn't negate the potential for individual success or appreciation.</string>
+				<key>fallacy</key>
+				<string>Appeal to popularity (Argumentum ad populum): An argument that something is true because many people believe it.</string>
+				<key>id</key>
+				<string>58EC34A7-3288-48B1-A9E3-3AB58E5AA2F5</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Argumentum_ad_populum</string>
+				<key>originalText</key>
+				<string>Some people say it’s never too late to learn, but if that were true, we’d see more adults picking up instruments and becoming great musicians.</string>
+			</dict>
+		</array>
+		<key>fallacyResponseJSON</key>
+		<string>[{"originalText":"Anyone who doesn’t learn to play a musical instrument as a child will never truly appreciate music. If you didn’t take lessons growing up, you missed your chance to understand what music is really about.","fallacy":"Appeal to tradition (Argumentum ad antiquitatem): An argument that something is good or correct because it's old or traditional.","counter":"Challenge the premise that early exposure is essential for appreciation by providing examples of people who developed a deep appreciation for music later in life.","avoidance":"Focus on the benefits of musical education without tying it exclusively to childhood.","reference":"https:\/\/en.wikipedia.org\/wiki\/Appeal_to_tradition"},{"originalText":"Some people say it’s never too late to learn, but if that were true, we’d see more adults picking up instruments and becoming great musicians.","fallacy":"Appeal to popularity (Argumentum ad populum): An argument that something is true because many people believe it.","avoidance":"Avoid using the number of adult musicians as evidence for or against the ability to appreciate music.","counter":"Explain that the number of people doing something doesn't determine its value or possibility. Many factors influence adult learning, and lack of widespread mastery doesn't negate the potential for individual success or appreciation.","reference":"https:\/\/en.wikipedia.org\/wiki\/Argumentum_ad_populum"},{"counter":"Point out the misrepresentation. Explain that enjoying music and playing music are different activities that can be enjoyed independently.","reference":"https:\/\/en.wikipedia.org\/wiki\/Straw_man","originalText":"Besides, those who claim to enjoy music without playing an instrument are just pretending.","avoidance":"Address the actual arguments of those who enjoy music without playing instruments.","fallacy":"Straw man: Misrepresenting someone's argument to make it easier to attack."},{"counter":"Challenge the narrow definition of \"music lover.\"  Provide examples of people who developed a love of music later in life and demonstrate their deep appreciation.","reference":"https:\/\/en.wikipedia.org\/wiki\/No_true_Scotsman","avoidance":"Define \"music lover\" objectively, without excluding those who develop their passion later in life.","originalText":"Of course, some adults do learn to play, but if you weren’t passionate about music as a child, you’re not a real music lover. After all, true music lovers start young.","fallacy":"No true Scotsman: Defining a group in a way that excludes counterexamples."}]</string>
+		<key>id</key>
+		<string>533C6343-A8F4-43D0-98E4-AEE7698A6B5A</string>
+		<key>inputText</key>
+		<string>Anyone who doesn’t learn to play a musical instrument as a child will never truly appreciate music. If you didn’t take lessons growing up, you missed your chance to understand what music is really about.
+Some people say it’s never too late to learn, but if that were true, we’d see more adults picking up instruments and becoming great musicians. Besides, those who claim to enjoy music without playing an instrument are just pretending.
+Of course, some adults do learn to play, but if you weren’t passionate about music as a child, you’re not a real music lover. After all, true music lovers start young.</string>
+		<key>timestamp</key>
+		<date>2025-04-30T02:17:47Z</date>
+	</dict>
+	<dict>
+		<key>fallacyInstances</key>
+		<array>
+			<dict>
+				<key>avoidance</key>
+				<string>Accurately represent the arguments made by critics of reading without exaggerating or distorting them.</string>
+				<key>counter</key>
+				<string>Challenge the misrepresentation by providing evidence that critics of reading do not typically make such claims or by demonstrating the diversity of their arguments.</string>
+				<key>fallacy</key>
+				<string>Straw man: Misrepresenting an opponent's argument to make it easier to attack.</string>
+				<key>id</key>
+				<string>BA9CA6B2-0EF0-4C8A-8A8D-88D71F8039CC</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Straw_man</string>
+				<key>originalText</key>
+				<string>However, critics of reading often claim that readers just want to avoid real responsibilities, which is an unfair characterization.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Acknowledge the existence of readers who enjoy both fiction and non-fiction, or those who may not strongly prefer either.</string>
+				<key>counter</key>
+				<string>Point out the oversimplification and provide examples of people who enjoy both genres or other forms of reading.</string>
+				<key>fallacy</key>
+				<string>False dilemma/False dichotomy: Presenting only two options when more exist.</string>
+				<key>id</key>
+				<string>07EF22E7-AD6F-4297-8AB7-981C31296B38</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/False_dilemma</string>
+				<key>originalText</key>
+				<string>Some people say that there are only two kinds of readers: those who love fiction and those who prefer non-fiction.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Avoid making unsupported generalizations and focus on the specific claim about novel enjoyment.</string>
+				<key>counter</key>
+				<string>Challenge the connection between disliking novels and disliking all stories. Provide examples of people who enjoy stories in other formats.</string>
+				<key>fallacy</key>
+				<string>Slippery slope: Arguing that one action will inevitably lead to a series of negative consequences.</string>
+				<key>id</key>
+				<string>04CD6EED-C477-4FC7-A5C1-1BE4A2E60501</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Slippery_slope</string>
+				<key>originalText</key>
+				<string>If you don’t enjoy reading novels, then clearly you must dislike all stories altogether.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Avoid gatekeeping and defining membership based on arbitrary criteria. Recognize that reading habits and book ownership vary.</string>
+				<key>counter</key>
+				<string>Challenge the notion that library size determines reading authenticity. Point out that access to books and reading preferences are diverse.</string>
+				<key>fallacy</key>
+				<string>Appeal to purity/No true Scotsman: Arguing that someone is not a "true" member of a group if they don't adhere to specific characteristics.</string>
+				<key>id</key>
+				<string>5B873642-A902-4E23-85DC-6919F80F1E97</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/No_true_Scotsman</string>
+				<key>originalText</key>
+				<string>Of course, some might say they enjoy both fiction and non-fiction, but if someone claims to love books yet doesn’t own a large personal library, can they really be considered a true reader? After all, real readers always have shelves full of books at home.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Avoid using subjective qualifiers like "truly appreciates" and focus on objective criteria.</string>
+				<key>counter</key>
+				<string>Point out that appreciation of literature is subjective and can encompass various genres, including non-fiction.</string>
+				<key>fallacy</key>
+				<string>No true Scotsman: Redefining a group's characteristics to exclude those who don't fit a preconceived notion.</string>
+				<key>id</key>
+				<string>A6372E82-8F84-4768-9710-BB88B08BB610</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/No_true_Scotsman</string>
+				<key>originalText</key>
+				<string>But honestly, anyone who truly appreciates literature would never choose non-fiction over a good novel.</string>
+			</dict>
+		</array>
+		<key>fallacyResponseJSON</key>
+		<string>[{"reference":"https:\/\/en.wikipedia.org\/wiki\/False_dilemma","avoidance":"Acknowledge the existence of readers who enjoy both fiction and non-fiction, or those who may not strongly prefer either.","counter":"Point out the oversimplification and provide examples of people who enjoy both genres or other forms of reading.","fallacy":"False dilemma\/False dichotomy: Presenting only two options when more exist.","originalText":"Some people say that there are only two kinds of readers: those who love fiction and those who prefer non-fiction."},{"avoidance":"Avoid making unsupported generalizations and focus on the specific claim about novel enjoyment.","fallacy":"Slippery slope: Arguing that one action will inevitably lead to a series of negative consequences.","reference":"https:\/\/en.wikipedia.org\/wiki\/Slippery_slope","originalText":"If you don’t enjoy reading novels, then clearly you must dislike all stories altogether.","counter":"Challenge the connection between disliking novels and disliking all stories. Provide examples of people who enjoy stories in other formats."},{"counter":"Point out that appreciation of literature is subjective and can encompass various genres, including non-fiction.","reference":"https:\/\/en.wikipedia.org\/wiki\/No_true_Scotsman","avoidance":"Avoid using subjective qualifiers like \"truly appreciates\" and focus on objective criteria.","originalText":"But honestly, anyone who truly appreciates literature would never choose non-fiction over a good novel.","fallacy":"No true Scotsman: Redefining a group's characteristics to exclude those who don't fit a preconceived notion."},{"avoidance":"Accurately represent the arguments made by critics of reading without exaggerating or distorting them.","fallacy":"Straw man: Misrepresenting an opponent's argument to make it easier to attack.","originalText":"However, critics of reading often claim that readers just want to avoid real responsibilities, which is an unfair characterization.","counter":"Challenge the misrepresentation by providing evidence that critics of reading do not typically make such claims or by demonstrating the diversity of their arguments.","reference":"https:\/\/en.wikipedia.org\/wiki\/Straw_man"},{"fallacy":"Appeal to purity\/No true Scotsman: Arguing that someone is not a \"true\" member of a group if they don't adhere to specific characteristics.","counter":"Challenge the notion that library size determines reading authenticity. Point out that access to books and reading preferences are diverse.","reference":"https:\/\/en.wikipedia.org\/wiki\/No_true_Scotsman","originalText":"Of course, some might say they enjoy both fiction and non-fiction, but if someone claims to love books yet doesn’t own a large personal library, can they really be considered a true reader? After all, real readers always have shelves full of books at home.","avoidance":"Avoid gatekeeping and defining membership based on arbitrary criteria. Recognize that reading habits and book ownership vary."}]</string>
+		<key>id</key>
+		<string>1A054FF6-EF6C-471F-9BEB-0C13BB83A5C8</string>
+		<key>inputText</key>
+		<string>Some people say that there are only two kinds of readers: those who love fiction and those who prefer non-fiction. If you don’t enjoy reading novels, then clearly you must dislike all stories altogether. But honestly, anyone who truly appreciates literature would never choose non-fiction over a good novel.
+Others argue that reading for pleasure is pointless because there are more important things to worry about in life, like solving world hunger or curing diseases. However, critics of reading often claim that readers just want to avoid real responsibilities, which is an unfair characterization.
+Of course, some might say they enjoy both fiction and non-fiction, but if someone claims to love books yet doesn’t own a large personal library, can they really be considered a true reader? After all, real readers always have shelves full of books at home.</string>
+		<key>timestamp</key>
+		<date>2025-04-30T02:18:20Z</date>
+	</dict>
+	<dict>
+		<key>fallacyInstances</key>
+		<array>
+			<dict>
+				<key>avoidance</key>
+				<string>Focus on addressing the claim about other hydrating beverages without attacking the people who make the claim.</string>
+				<key>counter</key>
+				<string>Point out that the argument is attacking the person making the claim, not the claim itself.  Restate the opposing argument and provide supporting evidence.</string>
+				<key>fallacy</key>
+				<string>Ad hominem: Attacking the character, motives, or other attributes of the person making the argument, rather than the argument itself.</string>
+				<key>id</key>
+				<string>ECCCB1E8-BA46-4D4A-B3AB-D3AAA2955252</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Ad_hominem</string>
+				<key>originalText</key>
+				<string>Some claim that other beverages can hydrate you just as well, but that’s just misinformation spread by people who don’t care about their well-being.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Acknowledge that individual hydration needs can vary and that feeling fine can be a valid indicator of adequate hydration.</string>
+				<key>counter</key>
+				<string>Point out the fallacy by demonstrating how the definition of “understanding health” is being manipulated to exclude those who don't follow the eight-glass rule.</string>
+				<key>fallacy</key>
+				<string>No true Scotsman: Modifying the definition of a category to exclude counterexamples.</string>
+				<key>id</key>
+				<string>0FE6CA40-BEAC-4E1D-A8CC-171AAEE64F24</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/No_true_Scotsman</string>
+				<key>originalText</key>
+				<string>Of course, some people say they feel fine with less water, but if they really understood health, they’d follow the eight-glass rule.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Acknowledge the variety of ways to stay hydrated and avoid presenting a single method as the only healthy option.</string>
+				<key>counter</key>
+				<string>Provide examples of other healthy ways to stay hydrated, such as consuming fruits and vegetables with high water content or drinking other beverages.</string>
+				<key>fallacy</key>
+				<string>False dilemma/Black-and-white fallacy: Presenting only two options when more exist.</string>
+				<key>id</key>
+				<string>8F2E271A-B1B2-4F77-A6E3-7A00C584333A</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/False_dilemma</string>
+				<key>originalText</key>
+				<string>Clearly, there’s only one healthy way to stay hydrated.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Focus on the potential benefits of drinking enough water without exaggerating the negative consequences of not reaching a specific amount.</string>
+				<key>counter</key>
+				<string>Question the direct link between not drinking eight glasses of water and neglecting one's health, providing examples of other healthy habits.</string>
+				<key>fallacy</key>
+				<string>Appeal to fear/Scare tactics: Attempting to persuade by manipulating fear.</string>
+				<key>id</key>
+				<string>EBC77ADC-A654-4CC5-8319-4A7475511A17</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Appeal_to_fear</string>
+				<key>originalText</key>
+				<string>If you’re not drinking at least eight glasses of water a day, you’re not taking care of your health.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Address the actual arguments for other hydrating beverages without attacking the character or motives of those who make them.</string>
+				<key>counter</key>
+				<string>Provide evidence that other beverages can contribute to hydration and point out the mischaracterization of the opposing view.</string>
+				<key>fallacy</key>
+				<string>Straw man: Misrepresenting an opponent's argument to make it easier to attack.</string>
+				<key>id</key>
+				<string>598CC094-4546-4E39-B740-C9F33C63CC3E</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Straw_man</string>
+				<key>originalText</key>
+				<string>Some claim that other beverages can hydrate you just as well, but that’s just misinformation spread by people who don’t care about their well-being.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Explain the scientific reasons why water is important for hydration, rather than relying solely on the fact that doctors recommend it.</string>
+				<key>counter</key>
+				<string>Acknowledge that doctors recommend water but point out that other beverages can also hydrate and that individual needs vary. Also, doctors don't *always* recommend just water.</string>
+				<key>fallacy</key>
+				<string>Appeal to authority: Basing an argument solely on the supposed authority of a figure without further justification.</string>
+				<key>id</key>
+				<string>97CD7C6B-84E4-42DD-BBC4-F4EA62AB16E6</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Argument_from_authority</string>
+				<key>originalText</key>
+				<string>If water weren’t the best, why would doctors always recommend it?</string>
+			</dict>
+		</array>
+		<key>fallacyResponseJSON</key>
+		<string>[{"counter":"Question the direct link between not drinking eight glasses of water and neglecting one's health, providing examples of other healthy habits.","reference":"https:\/\/en.wikipedia.org\/wiki\/Appeal_to_fear","originalText":"If you’re not drinking at least eight glasses of water a day, you’re not taking care of your health.","fallacy":"Appeal to fear\/Scare tactics: Attempting to persuade by manipulating fear.","avoidance":"Focus on the potential benefits of drinking enough water without exaggerating the negative consequences of not reaching a specific amount."},{"originalText":"Some claim that other beverages can hydrate you just as well, but that’s just misinformation spread by people who don’t care about their well-being.","counter":"Provide evidence that other beverages can contribute to hydration and point out the mischaracterization of the opposing view.","fallacy":"Straw man: Misrepresenting an opponent's argument to make it easier to attack.","avoidance":"Address the actual arguments for other hydrating beverages without attacking the character or motives of those who make them.","reference":"https:\/\/en.wikipedia.org\/wiki\/Straw_man"},{"avoidance":"Explain the scientific reasons why water is important for hydration, rather than relying solely on the fact that doctors recommend it.","originalText":"If water weren’t the best, why would doctors always recommend it?","counter":"Acknowledge that doctors recommend water but point out that other beverages can also hydrate and that individual needs vary. Also, doctors don't *always* recommend just water.","fallacy":"Appeal to authority: Basing an argument solely on the supposed authority of a figure without further justification.","reference":"https:\/\/en.wikipedia.org\/wiki\/Argument_from_authority"},{"reference":"https:\/\/en.wikipedia.org\/wiki\/Ad_hominem","fallacy":"Ad hominem: Attacking the character, motives, or other attributes of the person making the argument, rather than the argument itself.","counter":"Point out that the argument is attacking the person making the claim, not the claim itself.  Restate the opposing argument and provide supporting evidence.","avoidance":"Focus on addressing the claim about other hydrating beverages without attacking the people who make the claim.","originalText":"Some claim that other beverages can hydrate you just as well, but that’s just misinformation spread by people who don’t care about their well-being."},{"avoidance":"Acknowledge that individual hydration needs can vary and that feeling fine can be a valid indicator of adequate hydration.","fallacy":"No true Scotsman: Modifying the definition of a category to exclude counterexamples.","reference":"https:\/\/en.wikipedia.org\/wiki\/No_true_Scotsman","counter":"Point out the fallacy by demonstrating how the definition of “understanding health” is being manipulated to exclude those who don't follow the eight-glass rule.","originalText":"Of course, some people say they feel fine with less water, but if they really understood health, they’d follow the eight-glass rule."},{"reference":"https:\/\/en.wikipedia.org\/wiki\/False_dilemma","fallacy":"False dilemma\/Black-and-white fallacy: Presenting only two options when more exist.","avoidance":"Acknowledge the variety of ways to stay hydrated and avoid presenting a single method as the only healthy option.","counter":"Provide examples of other healthy ways to stay hydrated, such as consuming fruits and vegetables with high water content or drinking other beverages.","originalText":"Clearly, there’s only one healthy way to stay hydrated."}]</string>
+		<key>id</key>
+		<string>D33EF675-F256-4D15-B4E9-EF5EA9E7E158</string>
+		<key>inputText</key>
+		<string>If you’re not drinking at least eight glasses of water a day, you’re not taking care of your health. People who drink less are just ignoring what their bodies need.
+Some claim that other beverages can hydrate you just as well, but that’s just misinformation spread by people who don’t care about their well-being. If water weren’t the best, why would doctors always recommend it?
+Of course, some people say they feel fine with less water, but if they really understood health, they’d follow the eight-glass rule. Clearly, there’s only one healthy way to stay hydrated.</string>
+		<key>timestamp</key>
+		<date>2025-04-30T02:18:01Z</date>
+	</dict>
+	<dict>
+		<key>fallacyInstances</key>
+		<array>
+			<dict>
+				<key>avoidance</key>
+				<string>Provide a clear and consistent definition of "professional" without excluding individuals based on desk tidiness.</string>
+				<key>counter</key>
+				<string>Provide examples of successful professionals with messy desks, challenging the narrow definition presented.</string>
+				<key>fallacy</key>
+				<string>No true Scotsman: Redefining a group to exclude counterexamples.</string>
+				<key>id</key>
+				<string>BC0E0A00-990D-46EB-AD95-240047EED588</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/No_true_Scotsman</string>
+				<key>originalText</key>
+				<string>True professionals always keep their workspace immaculate.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Acknowledge that desk tidiness exists on a spectrum and doesn't necessarily correlate with productivity.</string>
+				<key>counter</key>
+				<string>Point out the existence of other possibilities, such as productive workers with messy desks and unproductive workers with clean desks.</string>
+				<key>fallacy</key>
+				<string>False dilemma/False dichotomy: Presenting two options as the only possibilities when more exist.</string>
+				<key>id</key>
+				<string>9EE9C1E1-73EC-4FB7-A0D7-13A21AF55D01</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/False_dilemma</string>
+				<key>originalText</key>
+				<string>There are only two types of workers: those with spotless desks and those who can’t get anything done.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Focus on evidence-based arguments rather than relying on the habits of others.</string>
+				<key>counter</key>
+				<string>Explain that correlation does not equal causation and that successful people may have tidy desks for reasons unrelated to productivity.</string>
+				<key>fallacy</key>
+				<string>Appeal to authority: Arguing that something is true because successful people do it.</string>
+				<key>id</key>
+				<string>E6EC756B-26CD-42C1-B8B8-50AFBD4FEEBB</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Appeal_to_authority</string>
+				<key>originalText</key>
+				<string>If a clean desk didn’t matter, why do so many successful people keep theirs tidy?</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Avoid making sweeping generalizations about productivity based solely on desk organization.</string>
+				<key>counter</key>
+				<string>Provide counterexamples of productive individuals with messy desks or unproductive individuals with clean desks.</string>
+				<key>fallacy</key>
+				<string>Hasty Generalization: Drawing a conclusion based on insufficient or unrepresentative evidence.</string>
+				<key>id</key>
+				<string>E3BC3C9D-2AEB-46E3-AA03-FFF0442C136B</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Hasty_generalization</string>
+				<key>originalText</key>
+				<string>If your desk is messy, you’re obviously not productive.</string>
+			</dict>
+		</array>
+		<key>fallacyResponseJSON</key>
+		<string>[{"reference":"https:\/\/en.wikipedia.org\/wiki\/False_dilemma","fallacy":"False dilemma\/False dichotomy: Presenting two options as the only possibilities when more exist.","avoidance":"Acknowledge that desk tidiness exists on a spectrum and doesn't necessarily correlate with productivity.","originalText":"There are only two types of workers: those with spotless desks and those who can’t get anything done.","counter":"Point out the existence of other possibilities, such as productive workers with messy desks and unproductive workers with clean desks."},{"fallacy":"Appeal to authority: Arguing that something is true because successful people do it.","originalText":"If a clean desk didn’t matter, why do so many successful people keep theirs tidy?","counter":"Explain that correlation does not equal causation and that successful people may have tidy desks for reasons unrelated to productivity.","avoidance":"Focus on evidence-based arguments rather than relying on the habits of others.","reference":"https:\/\/en.wikipedia.org\/wiki\/Appeal_to_authority"},{"fallacy":"No true Scotsman: Redefining a group to exclude counterexamples.","counter":"Provide examples of successful professionals with messy desks, challenging the narrow definition presented.","originalText":"True professionals always keep their workspace immaculate.","reference":"https:\/\/en.wikipedia.org\/wiki\/No_true_Scotsman","avoidance":"Provide a clear and consistent definition of \"professional\" without excluding individuals based on desk tidiness."},{"counter":"Provide counterexamples of productive individuals with messy desks or unproductive individuals with clean desks.","avoidance":"Avoid making sweeping generalizations about productivity based solely on desk organization.","reference":"https:\/\/en.wikipedia.org\/wiki\/Hasty_generalization","fallacy":"Hasty Generalization: Drawing a conclusion based on insufficient or unrepresentative evidence.","originalText":"If your desk is messy, you’re obviously not productive."}]</string>
+		<key>id</key>
+		<string>5D21A334-D510-4C79-B9FC-66941113C8F7</string>
+		<key>inputText</key>
+		<string>There are only two types of workers: those with spotless desks and those who can’t get anything done. If your desk is messy, you’re obviously not productive.
+People who defend cluttered desks say that messiness is a sign of creativity, but that’s just a myth. If a clean desk didn’t matter, why do so many successful people keep theirs tidy?
+Even if someone claims to work well in a mess, can they really be considered organized? True professionals always keep their workspace immaculate.</string>
+		<key>timestamp</key>
+		<date>2025-04-30T02:17:33Z</date>
+	</dict>
+	<dict>
+		<key>fallacyInstances</key>
+		<array>
+			<dict>
+				<key>avoidance</key>
+				<string>Acknowledge the various legitimate reasons why someone might not exercise in the morning, instead of oversimplifying their motivations.</string>
+				<key>counter</key>
+				<string>Explain that being busy doesn't automatically equate to laziness, and that different people have valid scheduling constraints.</string>
+				<key>fallacy</key>
+				<string>Straw Man: Misrepresenting someone's argument to make it easier to attack.</string>
+				<key>id</key>
+				<string>DC5A187C-E8E9-4C06-BCB0-BE11E8756672</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Straw_man</string>
+				<key>originalText</key>
+				<string>People who skip morning exercise often say they’re too busy, but that’s just laziness disguised as productivity.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Focus on the benefits of exercise regardless of the time of day, supported by evidence, rather than appealing to the habits of a specific group.</string>
+				<key>counter</key>
+				<string>Point out that the habits of 'fitness enthusiasts' do not dictate the effectiveness of workouts at other times, and that individual needs and schedules vary.</string>
+				<key>fallacy</key>
+				<string>Appeal to Authority/Bandwagon Fallacy: Arguing that something is true because popular or endorsed by authority figures.</string>
+				<key>id</key>
+				<string>9022AB9F-36CD-42BF-9342-2F439C858162</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Appeal_to_authority</string>
+				<key>originalText</key>
+				<string>After all, real fitness enthusiasts are always up at dawn, jogging in the park. If you prefer evening workouts, you’re probably just making excuses.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Focus on presenting evidence for the effectiveness of morning workouts rather than relying on the number of people who do them.</string>
+				<key>counter</key>
+				<string>Explain that the popularity of a workout time doesn't determine its effectiveness, and individual preferences and schedules influence choices.</string>
+				<key>fallacy</key>
+				<string>Bandwagon Fallacy/Appeal to Popularity: Assuming that something is true because it's popular or that if something were true, it would be widely practiced.</string>
+				<key>id</key>
+				<string>69F07B4A-F42A-427C-B45B-E11CF931BA07</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Bandwagon_effect</string>
+				<key>originalText</key>
+				<string>but if afternoon workouts were effective, everyone would be doing them. Clearly, morning exercise is the only way to go.</string>
+			</dict>
+			<dict>
+				<key>avoidance</key>
+				<string>Provide scientific evidence for the benefits of morning workouts, rather than relying on the routines of athletes.</string>
+				<key>counter</key>
+				<string>Highlight that athletes often follow highly specialized training regimes that may not be applicable or optimal for the average person.</string>
+				<key>fallacy</key>
+				<string>Appeal to Authority: Basing the validity of an argument solely on the practices of successful individuals.</string>
+				<key>id</key>
+				<string>6EBD3311-B70C-4601-9770-0DAEB1C5A368</string>
+				<key>link</key>
+				<string>https://en.wikipedia.org/wiki/Appeal_to_authority</string>
+				<key>originalText</key>
+				<string>Besides, if morning exercise were truly optional, why do so many successful athletes train early?</string>
+			</dict>
+		</array>
+		<key>fallacyResponseJSON</key>
+		<string>[{"avoidance":"Focus on the benefits of exercise regardless of the time of day, supported by evidence, rather than appealing to the habits of a specific group.","fallacy":"Appeal to Authority\/Bandwagon Fallacy: Arguing that something is true because popular or endorsed by authority figures.","originalText":"After all, real fitness enthusiasts are always up at dawn, jogging in the park. If you prefer evening workouts, you’re probably just making excuses.","counter":"Point out that the habits of 'fitness enthusiasts' do not dictate the effectiveness of workouts at other times, and that individual needs and schedules vary.","reference":"https:\/\/en.wikipedia.org\/wiki\/Appeal_to_authority"},{"reference":"https:\/\/en.wikipedia.org\/wiki\/Straw_man","originalText":"People who skip morning exercise often say they’re too busy, but that’s just laziness disguised as productivity.","counter":"Explain that being busy doesn't automatically equate to laziness, and that different people have valid scheduling constraints.","fallacy":"Straw Man: Misrepresenting someone's argument to make it easier to attack.","avoidance":"Acknowledge the various legitimate reasons why someone might not exercise in the morning, instead of oversimplifying their motivations."},{"reference":"https:\/\/en.wikipedia.org\/wiki\/Appeal_to_authority","counter":"Highlight that athletes often follow highly specialized training regimes that may not be applicable or optimal for the average person.","fallacy":"Appeal to Authority: Basing the validity of an argument solely on the practices of successful individuals.","avoidance":"Provide scientific evidence for the benefits of morning workouts, rather than relying on the routines of athletes.","originalText":"Besides, if morning exercise were truly optional, why do so many successful athletes train early?"},{"counter":"Explain that the popularity of a workout time doesn't determine its effectiveness, and individual preferences and schedules influence choices.","fallacy":"Bandwagon Fallacy\/Appeal to Popularity: Assuming that something is true because it's popular or that if something were true, it would be widely practiced.","originalText":"but if afternoon workouts were effective, everyone would be doing them. Clearly, morning exercise is the only way to go.","avoidance":"Focus on presenting evidence for the effectiveness of morning workouts rather than relying on the number of people who do them.","reference":"https:\/\/en.wikipedia.org\/wiki\/Bandwagon_effect"}]</string>
+		<key>id</key>
+		<string>F719D380-D74E-4456-A72F-E01999472EE9</string>
+		<key>inputText</key>
+		<string>Some believe that if you don’t exercise first thing in the morning, you might as well not bother working out at all. After all, real fitness enthusiasts are always up at dawn, jogging in the park. If you prefer evening workouts, you’re probably just making excuses.
+People who skip morning exercise often say they’re too busy, but that’s just laziness disguised as productivity. Besides, if morning exercise were truly optional, why do so many successful athletes train early?
+Of course, some folks claim they get better results from afternoon sessions, but if afternoon workouts were effective, everyone would be doing them. Clearly, morning exercise is the only way to go.</string>
+		<key>timestamp</key>
+		<date>2025-04-30T02:22:53Z</date>
+	</dict>
+	<dict>
+		<key>fallacyInstances</key>
+		<array/>
+		<key>id</key>
+		<string>08592253-2E65-4E07-A9FC-DDE002DBD332</string>
+		<key>inputText</key>
+		<string>If you don’t bake your own bread, you’re not really interested in healthy eating. After all, people who care about their diet always make everything from scratch. Store-bought bread is just for people who don’t care what they eat.
+Some people argue that homemade bread takes too much time, but that’s just an excuse to avoid learning new skills. Besides, if you really valued your health, you’d make the effort.
+Of course, there are people who say they’re too busy or that store-bought bread is just as good, but if store-bought bread were truly healthy, why do so many nutritionists recommend baking at home? Clearly, homemade is the only sensible choice.</string>
+		<key>timestamp</key>
+		<date>2025-04-30T02:49:28Z</date>
+	</dict>
+</array>
+</plist>

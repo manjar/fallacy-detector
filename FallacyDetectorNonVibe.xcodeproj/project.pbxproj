@@ -41,6 +41,20 @@
 			);
 			target = B48946B72DBBED6F003FCE8C /* FallacyDetectorNonVibe */;
 		};
+		B4BC39322DC1C78C0077BA48 /* Exceptions for "FallacyDetectorNonVibe" folder in "FallacyDetectorNonVibeTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/SampleAnalyses.plist,
+			);
+			target = B48946C82DBBED71003FCE8C /* FallacyDetectorNonVibeTests */;
+		};
+		B4BC39332DC1C78C0077BA48 /* Exceptions for "FallacyDetectorNonVibe" folder in "FallacyDetectorNonVibeUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/SampleAnalyses.plist,
+			);
+			target = B48946D22DBBED71003FCE8C /* FallacyDetectorNonVibeUITests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -48,6 +62,8 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				B48946DB2DBBED71003FCE8C /* Exceptions for "FallacyDetectorNonVibe" folder in "FallacyDetectorNonVibe" target */,
+				B4BC39322DC1C78C0077BA48 /* Exceptions for "FallacyDetectorNonVibe" folder in "FallacyDetectorNonVibeTests" target */,
+				B4BC39332DC1C78C0077BA48 /* Exceptions for "FallacyDetectorNonVibe" folder in "FallacyDetectorNonVibeUITests" target */,
 			);
 			path = FallacyDetectorNonVibe;
 			sourceTree = "<group>";

@@ -13,7 +13,6 @@ struct ContentView: View {
     @State private var showInputSheet = false
     @State private var showSummarySheet = false
     @Query private var items: [Item]
-    @State private var filteredItems: [Item] = []
     @State private var selectedItem: Item? = nil
     @State private var searchText = ""
 
@@ -70,22 +69,8 @@ struct ContentView: View {
                         let newItem = Item(timestamp: Date(), inputText: inputText)
                         modelContext.insert(newItem)
                         Task {
-                            let processor = FallacyProcessor(promptSender: OpenAIPromptSender())
-                            let fallacies = await processor.fetch(text: inputText)
-                            newItem.analysisState = .inProgress
-                            await MainActor.run {
-                                if let fallacies {
-                                    newItem.saveFallacyResults(fallacies)
-                                    newItem.errorMessage = nil
-                                    newItem.analysisState = .completed
-                                } else {
-                                    // TODO: distinguish between case where no fallacies were found and where some actual error occurred
-                                    newItem.fallacyResponseJSON = nil
-                                    newItem.errorMessage = "No fallacies found or analysis failed."
-                                    newItem.analysisState = .failed
-                                }
-                                // If needed, save context here
-                            }
+                            let processor = FallacyProcessor(modelContext: modelContext)
+                            await processor.createItemWithInputText(inputText)
                         }
                     }
                     showInputSheet = false
@@ -101,24 +86,15 @@ struct ContentView: View {
                 Text("Select an item")
             }
         }
-        .onChange(of: searchText) {
-            updateFilteredItems()
-        }
-        .onChange(of: items) {
-            updateFilteredItems()
-        }
-        .onAppear() {
-            updateFilteredItems()
-        }
     }
     
-    private func updateFilteredItems() {
+    var filteredItems: [Item] {
         if searchText.isEmpty {
-            filteredItems = items
+            return items
         } else {
-            filteredItems = items.filter { item in
+            return items.filter { item in
                 item.inputText.localizedCaseInsensitiveContains(searchText) ||
-                item.fallacyInstances.contains { (fallacy: FallacyInstance) in
+                item.fallacyInstances.contains { fallacy in
                     [fallacy.avoidance, fallacy.counter, fallacy.fallacy]
                         .contains { $0.localizedCaseInsensitiveContains(searchText) }
                 }

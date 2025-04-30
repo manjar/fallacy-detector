@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FallacyView: View {
     let item: Item
+    @Environment(\.modelContext) private var modelContext
     @State private var showHelpSheet = false
     
     var body: some View {
@@ -64,20 +65,8 @@ struct FallacyView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
                     Task {
-                        let processor = FallacyProcessor(promptSender: OpenAIPromptSender())
-                        let fallacies = await processor.fetch(text: item.inputText)
-                        item.analysisState = .inProgress
-                        await MainActor.run {
-                            if let fallacies {
-                                item.saveFallacyResults(fallacies)
-                                item.errorMessage = nil
-                                item.analysisState = .completed
-                            } else {
-                                item.fallacyResponseJSON = nil
-                                item.errorMessage = "No fallacies found or analysis failed."
-                                item.analysisState = .failed
-                            }
-                        }
+                        let processor = FallacyProcessor(modelContext: modelContext)
+                        await processor.reAnalyzeItem(item)
                     }
                 }) {
                     Label("Re-Analyze", systemImage: "arrow.clockwise")
