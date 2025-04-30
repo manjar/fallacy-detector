@@ -162,7 +162,7 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             Button("Create example") {
-                SampleProvider().createSampleItem(inModelContext: modelContext)
+                SampleProvider.shared.createSampleItem(inModelContext: modelContext)
             }
         }
         .padding()

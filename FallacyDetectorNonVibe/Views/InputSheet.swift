@@ -50,7 +50,7 @@ struct InputSheet: View {
                     Spacer()
                     
                     Button(action: {
-                        inputText = SampleProvider().nextSamplePassage()!
+                        inputText = SampleProvider.shared.nextSamplePassage()!
                     }) {
                         Label("Sample", systemImage: "text.quote")
                     }
