@@ -143,24 +143,31 @@ extension FallacyInstance {
     }
 }
 
-private let fallaciesPlistFilename = "Fallacies.plist"
+private let fallaciesPlistFilename = "SampleAnalyses"
 
-private var fallaciesPlistURL: URL {
+private var fallaciesPlistExportURL: URL {
     FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        .appendingPathComponent(fallaciesPlistFilename)
+        .appendingPathComponent(fallaciesPlistFilename).appendingPathExtension( "plist" )
 }
+
+private var fallaciesPlistResourceURL: URL? {
+    Bundle.main.url(forResource: fallaciesPlistFilename, withExtension: "plist")
+}
+
 
 func saveCodableItemsToPlist(_ items: [CodableItem]) throws {
     let encoder = PropertyListEncoder()
     encoder.outputFormat = .xml
 
     let data = try encoder.encode(items)
-    try data.write(to: fallaciesPlistURL)
-    print("Saved to \(fallaciesPlistURL.path)")
+    try data.write(to: fallaciesPlistExportURL)
+    print("Saved to \(fallaciesPlistExportURL.path)")
 }
 
 func loadCodableItemsFromPlist() throws -> [CodableItem] {
-    let data = try Data(contentsOf: fallaciesPlistURL)
+    guard let url = fallaciesPlistResourceURL else { return [] }
+
+    let data = try Data(contentsOf: url)
     let decoder = PropertyListDecoder()
     return try decoder.decode([CodableItem].self, from: data)
 }

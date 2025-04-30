@@ -12,18 +12,25 @@ struct FallacyProcessor {
     let promptSender: PromptSender = DefaultPromptSender()
     
     func createItemWithInputText(_ inputText: String) async -> Void {
-        let newItem = Item(timestamp: Date(), inputText: inputText)
-        await update(newItem, withInputText: inputText)
+        let itemID: UUID = await MainActor.run {
+            let newItem = Item(timestamp: Date(), inputText: inputText)
+            newItem.analysisState = .inProgress
+            modelContext.insert(newItem)
+            return newItem.id
+        }
+        await update(itemWithUUID: itemID, withInputText: inputText)
+        try? modelContext.save()
     }
 
     func reAnalyzeItem(_ item: Item) async -> Void {
-        await update(item, withInputText: item.inputText)
+        await update(itemWithUUID: item.id, withInputText: item.inputText)
     }
     
-    func update(_ item: Item, withInputText: String) async -> Void {
-        let fallacies = await getFallaciesFromServiceForInputText(item.inputText)
-        item.analysisState = .inProgress
-        let itemID = item.id
+    func update(itemWithUUID itemID: UUID, withInputText inputText: String) async -> Void {
+        let fallacies = await getFallaciesFromServiceForInputText(inputText)
+        if let itemToUpdate = try? fetchItem(by: itemID, context: modelContext) {
+            itemToUpdate.analysisState = .inProgress
+        }
         await MainActor.run {
             do {
                 if let itemToUpdate = try fetchItem(by: itemID, context: modelContext) {

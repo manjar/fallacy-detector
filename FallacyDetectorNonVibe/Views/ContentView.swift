@@ -66,14 +66,12 @@ struct ContentView: View {
             .sheet(isPresented: $showInputSheet) {
                 InputSheet { inputText in
                     withAnimation {
-                        let newItem = Item(timestamp: Date(), inputText: inputText)
-                        modelContext.insert(newItem)
                         Task {
                             let processor = FallacyProcessor(modelContext: modelContext)
                             await processor.createItemWithInputText(inputText)
                         }
+                        showInputSheet = false
                     }
-                    showInputSheet = false
                 }
             }
             .sheet(isPresented: $showSummarySheet) {
@@ -164,7 +162,7 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             Button("Create example") {
-                print("would be creating an example")
+                SampleProvider().createSampleItem(inModelContext: modelContext)
             }
         }
         .padding()
