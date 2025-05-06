@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B48946F12DBBF121003FCE8C /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = B48946F02DBBF121003FCE8C /* GoogleGenerativeAI */; };
+		B4BC3A002DC56C590077BA48 /* SecureAPIKeyStore in Frameworks */ = {isa = PBXBuildFile; productRef = B4BC39FF2DC56C590077BA48 /* SecureAPIKeyStore */; };
+		B4F3F9472DC947B300843F7B /* SecureAPIKeyStore in Frameworks */ = {isa = PBXBuildFile; productRef = B4F3F9462DC947B300843F7B /* SecureAPIKeyStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BC3A002DC56C590077BA48 /* SecureAPIKeyStore in Frameworks */,
+				B4F3F9472DC947B300843F7B /* SecureAPIKeyStore in Frameworks */,
 				B48946F12DBBF121003FCE8C /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +159,8 @@
 			name = FallacyDetectorNonVibe;
 			packageProductDependencies = (
 				B48946F02DBBF121003FCE8C /* GoogleGenerativeAI */,
+				B4BC39FF2DC56C590077BA48 /* SecureAPIKeyStore */,
+				B4F3F9462DC947B300843F7B /* SecureAPIKeyStore */,
 			);
 			productName = FallacyDetectorNonVibe;
 			productReference = B48946B82DBBED6F003FCE8C /* FallacyDetectorNonVibe.app */;
@@ -240,6 +246,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				B48946EE2DBBEF6B003FCE8C /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				B4F3F9452DC947B300843F7B /* XCLocalSwiftPackageReference "../SecureAPIKeyStore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B48946B92DBBED6F003FCE8C /* Products */;
@@ -642,6 +649,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		B4F3F9452DC947B300843F7B /* XCLocalSwiftPackageReference "../SecureAPIKeyStore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../SecureAPIKeyStore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		B48946EE2DBBEF6B003FCE8C /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -658,6 +672,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B48946EE2DBBEF6B003FCE8C /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
 			productName = GoogleGenerativeAI;
+		};
+		B4BC39FF2DC56C590077BA48 /* SecureAPIKeyStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SecureAPIKeyStore;
+		};
+		B4F3F9462DC947B300843F7B /* SecureAPIKeyStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SecureAPIKeyStore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

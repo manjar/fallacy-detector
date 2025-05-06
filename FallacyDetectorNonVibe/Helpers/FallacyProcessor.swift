@@ -7,9 +7,9 @@
 import Foundation
 import SwiftData
 
+@MainActor
 struct FallacyProcessor {
     let modelContext: ModelContext
-    let promptSender: PromptSender = DefaultPromptSender()
     
     func createItemWithInputText(_ inputText: String) async -> Void {
         let itemID: UUID = await MainActor.run {
@@ -53,7 +53,7 @@ struct FallacyProcessor {
     func getFallaciesFromServiceForInputText(_ text: String) async -> [Fallacy]? {
         let prompt = PromptGenerator.generatePrompt(for: text)
         do {
-            if let responseString = try await promptSender.sendPrompt(prompt) {
+            if let promptSender = DefaultPromptSender(), let responseString = try await promptSender.sendPrompt(prompt) {
                 let fallacies = ResponseParser.parseJSON(jsonString: responseString)
                 return fallacies
             }

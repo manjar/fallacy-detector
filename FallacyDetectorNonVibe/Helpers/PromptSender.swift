@@ -9,6 +9,7 @@
 
 import Foundation
 import GoogleGenerativeAI
+import SecureAPIKeyStore
 
 protocol PromptSender {
     func sendPrompt(_ prompt: String) async throws -> String?
@@ -20,21 +21,38 @@ extension PromptSender {
     }
 }
 
-func DefaultPromptSender() -> PromptSender {
-    GeminiPromptSender()
+@MainActor
+func DefaultPromptSender() -> PromptSender? {
+    let keyManager = APIKeyManager.shared
+    switch keyManager.currentService {
+    case .gemini:
+        return GeminiPromptSender()
+    case .openAI:
+        return OpenAIPromptSender(keyManager: keyManager)
+    default:
+        return nil
+    }
 }
 
 class GeminiPromptSender: PromptSender {
-    private let model: GenerativeModel
+    private let model: GenerativeModel?
+    private let keyManager: APIKeyManager
 
+    @MainActor
     init() {
-        self.model = GenerativeModel(
-            name: "gemini-1.5-pro-latest", // or "gemini-1.5-flash" for the latest model[5][6]
-            apiKey: APIKey.gemini.value
-        )
+        self.keyManager = APIKeyManager.shared
+        if let key = keyManager.getKey(for: Service.gemini) {
+            self.model = GenerativeModel(
+                name: "gemini-1.5-pro-latest", // or "gemini-1.5-flash" for the latest model[5][6]
+                apiKey: key
+            )
+        } else {
+            self.model = nil
+        }
     }
 
     func sendPrompt(_ prompt: String) async throws -> String? {
+        guard let model else { return nil }
         do {
             print(">>> Sending prompt: \(prompt)")
             let response = try await model.generateContent(prompt)
@@ -52,9 +70,14 @@ class GeminiPromptSender: PromptSender {
 }
 
 class OpenAIPromptSender: PromptSender {
-    private let apiKey = APIKey.openAI.value
+    private let keyManager: APIKeyManager
+    
+    init(keyManager: APIKeyManager) {
+        self.keyManager = keyManager
+    }
 
     func sendPrompt(_ prompt: String) async throws -> String? {
+        guard let apiKey = await keyManager.getKey(for: Service.openAI) else { return nil }
         logPrompt(prompt)
         // Compose request
         var request = URLRequest(url: URL(string: "https://api.openai.com/v1/chat/completions")!)
