@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationModels
 import SwiftData
 
 enum AnalysisState: Int, Codable {
@@ -17,42 +18,27 @@ enum AnalysisState: Int, Codable {
 
 @Model
 final class Item: Identifiable {
-    private(set) var id: UUID
+    private(set) var id: String
     var timestamp: Date
     var inputText: String
     var analysisState: AnalysisState
-    var fallacyResponseJSON: String?    // Store JSON string of fallacy results
     var errorMessage: String?          // Store error message if any
     // One-to-many relationship: an Item has many FallacyInstances
     var fallacyInstances: [FallacyInstance]
 
     init(timestamp: Date, inputText: String) {
-        self.id = UUID()
+        self.id = UUID().uuidString
         self.timestamp = timestamp
         self.inputText = inputText
         self.analysisState = .idle
-        self.fallacyResponseJSON = nil
         self.errorMessage = nil
         self.fallacyInstances = []
-    }
-    
-    /// Helper to save fallacy results as JSON
-    func saveFallacyResults(_ results: [Fallacy]) {
-        let encoder = JSONEncoder()
-        if let data = try? encoder.encode(results),
-           let jsonString = String(data: data, encoding: .utf8) {
-            self.fallacyResponseJSON = jsonString
-            let fallacyResults = ResponseParser.parseJSON(jsonString: jsonString)
-            for result in fallacyResults {
-                fallacyInstances.append(FallacyInstance(originalText: result.originalText, fallacy: result.fallacy, avoidance: result.avoidance, counter: result.counter, link: URL(string: result.reference)!))
-            }
-        }
     }
 }
 
 @Model
 final class FallacyInstance: Identifiable {
-    private(set) var id: UUID
+    private(set) var id: String
     var originalText: String
     var fallacy: String
     var avoidance: String
@@ -70,7 +56,7 @@ final class FallacyInstance: Identifiable {
         link: URL,
         item: Item? = nil
     ) {
-        self.id = UUID()
+        self.id = UUID().uuidString
         self.originalText = originalText
         self.fallacy = fallacy
         self.avoidance = avoidance
@@ -80,8 +66,24 @@ final class FallacyInstance: Identifiable {
     }
 }
 
+@Generable
+struct GenerableItem {
+    var errorMessage: String?
+    var fallacyInstances: [CodableFallacyInstance]
+    
+    func toModel(id: String,
+                 inputText: String) -> Item {
+        let item = Item(timestamp: Date(), inputText: inputText)
+        item.errorMessage = self.errorMessage
+        item.fallacyInstances = fallacyInstances.map({ instance in
+            instance.toModel(item: item)
+        })
+        return item
+    }
+}
+
 struct CodableItem: Codable, Identifiable {
-    var id: UUID
+    var id: String
     var timestamp: Date
     var inputText: String
     var fallacyResponseJSON: String?
@@ -90,15 +92,17 @@ struct CodableItem: Codable, Identifiable {
     
     func toModel() -> Item {
         let item = Item(timestamp: self.timestamp, inputText: self.inputText)
-        item.fallacyResponseJSON = self.fallacyResponseJSON
         item.errorMessage = self.errorMessage
         item.fallacyInstances = self.fallacyInstances.map { $0.toModel(item: item) }
         return item
     }
 }
 
+
+
+@Generable
 struct CodableFallacyInstance: Codable, Identifiable {
-    var id: UUID
+    var id: String
     var originalText: String
     var fallacy: String
     var avoidance: String
@@ -123,7 +127,6 @@ extension Item {
             id: self.id,
             timestamp: self.timestamp,
             inputText: self.inputText,
-            fallacyResponseJSON: self.fallacyResponseJSON,
             errorMessage: self.errorMessage,
             fallacyInstances: self.fallacyInstances.map { $0.toCodable() }
         )

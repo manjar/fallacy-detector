@@ -7,13 +7,11 @@
 
 import SwiftUI
 import SwiftData
-import SecureAPIKeyStore
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var showInputSheet = false
     @State private var showSummarySheet = false
-    @State private var showAPIKeySheet = false
     @Query private var items: [Item]
     @State private var selectedItem: Item? = nil
     @State private var searchText = ""
@@ -60,11 +58,6 @@ struct ContentView: View {
                 }
 #endif
                 ToolbarItem(placement: .primaryAction) {
-                    Button(action: { showAPIKeySheet = true }) {
-                        Label("Manage Keys", systemImage: "key.horizontal")
-                    }
-                }
-                ToolbarItem(placement: .primaryAction) {
                     Button(action: { showInputSheet = true }) {
                         Label("Add Item", systemImage: "plus")
                     }
@@ -83,9 +76,6 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showSummarySheet) {
                 SummaryView(summary: SummaryGenerator(items: items).summary)
-            }
-            .sheet(isPresented: $showAPIKeySheet) {
-                APIKeyManagerView(manager: APIKeyManager.shared)
             }
         } detail: {
             if let item = selectedItem {
